@@ -5,7 +5,10 @@ export class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="paper row flex-center sm-8 col">
+                <ProductsList/>
+                <ProductsList/>
+                <ProductsList/>
                 <ProductsList/>
             </div>
         );

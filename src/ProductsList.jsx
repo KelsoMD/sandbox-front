@@ -30,8 +30,8 @@ export class ProductsList extends React.Component {
     render() {
         const {isLoading, products} = this.state;
 
-        const productsList = (<div className="paper row flex-center sm-4 col padding-none">
-                <table className="background-warning">
+        const productsList = (<div>
+                <table>
                     <tbody>
                     {products.map((item, key) =>
                         <tr>
@@ -49,7 +49,7 @@ export class ProductsList extends React.Component {
         const loadingMessage = <span className="paper row flex-center sm-4 col">Loading...</span>;
 
         return (
-            <div className="paper">
+            <div className="paper border border-primary">
                 {isLoading ? loadingMessage : productsList}
             </div>
         );
