@@ -3,7 +3,7 @@ import './paper.css'
 import {Product} from "./Product";
 import axios from 'axios'
 
-export class MainComponent extends React.Component {
+export class ProductCard extends React.Component {
 
     constructor(props) {
         super(props);
@@ -14,14 +14,6 @@ export class MainComponent extends React.Component {
             amount: null,
             trademark: null
         };
-    }
-
-    render() {
-        const {isLoading, title, amount, trademark} = this.state;
-        return (
-            <div className="paper"><Product title={title} amount={amount} trademark={trademark} isLoading={isLoading}/>
-            </div>
-        );
     }
 
     async componentDidMount() {
@@ -42,6 +34,16 @@ export class MainComponent extends React.Component {
                 trademark
             }
         });
+    }
 
+    render() {
+        const {isLoading, title, amount, trademark} = this.state;
+        return (
+            <div className="paper">
+                <div>
+                    <Product title={title} amount={amount} trademark={trademark} isLoading={isLoading}/>
+                </div>
+            </div>
+        );
     }
 }

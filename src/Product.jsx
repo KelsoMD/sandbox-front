@@ -8,9 +8,9 @@ export class Product extends React.Component {
         const {title, amount, trademark, isLoading} = this.props;
 
         const product = (
-            <div>
-                <h4 className="mb-0">{title}</h4>
-                <h4 className="mb-0">{amount}</h4>
+            <div class="card"  width="20rem">
+                <p className="mb-0">{title}</p>
+                <p className="mb-0">{amount}</p>
                 <span className="text-muted">{trademark}</span>
             </div>
         );

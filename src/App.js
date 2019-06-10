@@ -1,14 +1,12 @@
 import React from 'react';
-import {NavBar} from "./NavBar";
-import {MainComponent} from "./MainComponent";
+import {ProductsList} from "./ProductsList";
 
 export class App extends React.Component {
 
     render() {
         return (
             <div>
-                <NavBar/>
-                <MainComponent/>
+                <ProductsList/>
             </div>
         );
     }
